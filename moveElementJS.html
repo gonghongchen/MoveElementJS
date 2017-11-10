@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>moveElementJS</title>
+		<style type="text/css">
+	    	* {
+	    		margin: 0;
+	    		padding: 0;
+	    	}
+	    	body {
+	    		min-height: 1000px;
+	    		border: 1px solid;
+	    	}
+	    	#div {
+	    		position: relative;
+	    		left: 300px;
+	    		width: 200px;
+	    		height: 200px;
+	    		background-color: #33C48C;
+	    	}
+	    	#div p {
+	    		height: 50px;
+	    		background-color: #449D44;
+	    	}
+	    	#div p span {
+	    		float: right;
+	    		background-color: #33C48C;
+	    		cursor: pointer;
+	    	}
+	    	#div2 {
+	    		position: fixed;
+	    		left: 0;
+	    		top: 0;
+	    		width: 200px;
+	    		height: 200px;
+	    		background-color: #CE8483;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<p>我是无用</p>
+		<p>我是无用</p>
+		<p>我是无用</p>
+		<div id="div">
+			<p>
+				可拖动区域
+				<span>固定</span>
+			</p>
+		</div>
+		<div id="div2">
+		</div>
+		<p>我是无用</p>
+		<p>我是无用</p>
+		<p>我是无用</p>
+		<script src="moveElement.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var div2 = document.getElementById("div2"),
+				func = moveElement.add(div2),	//为【div2】添加移动功能
+				div = document.getElementById("div"),
+				p = div.getElementsByTagName("p")[0],
+				span = p.getElementsByTagName("span")[0];
+				
+			div.onmousedown = function() {
+				moveElement.remove(div2, func);		//为【div2】移除移动功能
+				div2.innerHTML = "<b>移动功能已移除</b>";
+				var func2 = moveElement.add(div, p);	//为【div】添加移动功能，【p】为鼠标拖动区域
+				span.onclick = function() {
+					moveElement.remove(p, func2);		//为【p】移除移动功能
+					var textNode = document.createTextNode("已固定");
+					div.appendChild(textNode);
+				};
+				div.onmousedown = null;
+			};
+		</script>
+	</body>
+</html>
