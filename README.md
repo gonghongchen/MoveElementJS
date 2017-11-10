@@ -2,7 +2,7 @@
 给指定HTML元素添加鼠标移动（拖拽）的功能
 
 #### 1 使用方式
-> 引入moveElement的JS文件后，会得到一个全局对象【moveElement】，此对象有两个方法：
+  引入moveElement的JS文件后，会得到一个全局对象【moveElement】，此对象有两个方法：
 
 1.1 【moveElement.add(mouseMoveEle, mouseDownEle)】方法说明如下：
 * @description	为指定元素添加移动功能
@@ -22,7 +22,7 @@
 * 使用移除函数【moveElement.remove(mouseDownEle, func)】时若不成功，请再三确认参数是否传递正确。
 
 #### 3 浏览器兼容
-IE系列支持IE7+；其它主流浏览器（较）新版本都支持，低版本未测。
+  IE系列支持IE7+；其它主流浏览器（较）新版本都支持，低版本未测。
 
 #### 4 其它依赖
-无。
+  无。
