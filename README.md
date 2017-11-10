@@ -1,14 +1,14 @@
 # moveElementJS
 给指定HTML元素添加鼠标移动（拖拽）的功能
 
-1 使用方式
-引入moveElement的JS文件后，会得到一个全局对象【moveElement】，此对象有两个方法：
+#### 1 使用方式
+引入moveElement的JS文件后，会得到一个全局对象【moveElement】，此对象有两个方法：<br>
 
 1.1 【moveElement.add(mouseMoveEle, mouseDownEle)】方法说明如下：
-@description	为指定元素添加移动功能
-@parameter {object} mouseMoveEle 可移动的对象
-@parameter {object} [mouseDownEle] 鼠标点击并按住的对象
-@return {function} mouseDown 为该点击元素（即上面的[mouseDownEle]）绑定的函数，可用于配合下面的【remove】方法移除此元素的【mousedown】事件
+* @description	为指定元素添加移动功能
+* @parameter {object} mouseMoveEle 可移动的对象
+* @parameter {object} [mouseDownEle] 鼠标点击并按住的对象
+* @return {function} mouseDown 为该点击元素（即上面的[mouseDownEle]）绑定的函数，可用于配合下面的【remove】方法移除此元素的【mousedown】事件
 
 1.2【moveElement.remove(mouseDownEle, func)】方法说明如下：
 @description	移除点击元素的【mousedown】事件
