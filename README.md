@@ -1,4 +1,4 @@
-# moveElementJS
+# MoveElementJS
 给指定HTML元素添加鼠标移动（拖拽）的功能
 
 #### 1 使用方式
