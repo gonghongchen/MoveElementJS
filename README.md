@@ -26,3 +26,5 @@
 
 #### 4 其它依赖
   无。
+#### 5 Demo地址
+https://gonghongchen.github.io/MoveElementJS/
