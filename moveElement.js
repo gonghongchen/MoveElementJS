@@ -96,11 +96,11 @@
 				};
 				
 				//添加鼠标移动事件
-				funcs.addEventListener(moveEle, "mousemove", mouseMove);
+				funcs.addEventListener(doc, "mousemove", mouseMove);
 				
 				//鼠标抬起后移除鼠标移动事件
 				funcs.addEventListener(doc, "mouseup", function() {
-					funcs.removeEventListener(moveEle, "mousemove", mouseMove);
+					funcs.removeEventListener(doc, "mousemove", mouseMove);
 				});
 			};
 			
